@@ -1,8 +1,12 @@
 class Person
-  attr_reader: name
-  
+  attr_reader:name
+
   def initialize(name)
     @@name = name
+  end
+
+  def greeting
+    "Hi, my name is #{@@name}"
   end
 end
 
@@ -17,3 +21,8 @@ class Student < Person
     "I get it!"
   end
 end
+
+chris = Instructor.new('Chris')
+cristina = Student.new('Cristina')
+chris.greeting
+cristina.greeting
