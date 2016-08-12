@@ -23,8 +23,13 @@ class Student < Person
 end
 
 chris = Instructor.new('Chris')
-cristina = Student.new('Cristina')
 chris.greeting
-cristina.greeting
 chris.teach
+cristina = Student.new('Cristina')
+cristina.greeting
 cristina.learn
+
+#Calling teach method on student instance
+#cristina.teach
+#This does not work because the teach method is an instance method of class Instructor
+#so class Student (which only cristina is an instance of) is not able to find it.
